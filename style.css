@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    line-height: 25px;
+}
+.logo-image{
+    width: 88px;
+    height: 46px;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+.banner {
+    position: relative;
+    background: url(./images/space.jpg) no-repeat center center fixed; /* Note 1*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 450px; 
+}
+
+.banner::before{
+    content: "";
+    background-image: url(./images/space.jpg) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: 0.45; /* Note 2 */
+}
+
+
+.welcome{
+    position: absolute;
+    top: 150px;
+    left: 100px;
+}
+
+.welcome h1{
+    font-size: 45px;
+    color: #eeebeb;
+}
+
+.welcome p{
+    font-size: 18px;
+    color: #eeebeb;
+}
+
+#email{
+    padding: 8px 20px;
+    border-radius: 5px;
+    border-style: none;
+    width: 250px;
+    
+}
+
+.submit{
+    border-radius: 25px;
+    padding: 10px 100px;
+    margin-left: 15px;
+    font-size: 17px;
+    background-color: #08a7a7;
+    border-style: none;
+    color: #fff;
+}
+
+#aboutUs{
+    display: flex;
+}
+
+.box{
+    padding: 70px;
+    margin: 20px;
+}
+
+.text h2{
+   font-size: 35px;
+}
+
+.btn{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 17px;
+    border-radius: 25px;
+    padding: 8px 40px;
+    background-color: #08a7a7;
+    border-style: none;
+    color: #fff;
+}
+
+.btn:hover{
+    background-color: #13bebe;
+}
+
+#overview{
+    background-color: #efefef;
+    /*color: #fff;*/
+    padding: 50px;
+}
+
+.intro h2{
+    font-size: 35px;
+    text-align: center;
+}
+
+.intro p{
+    text-align: center;
+}
+
+.check{
+    border-radius: 25px;
+    font-size: 17px;
+    padding: 10px 80px;
+    margin: 25px 0 80px 0;
+    background-color: #08a7a7;
+    border-style: none;
+    color: #fff;
+}
+
+.card-img{
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 150%;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+}
+
+.card{
+    text-align: center;
+}
+
+.card h2{
+    font-size: 20px;
+}
+
+
+
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1250px){
+
+    #features{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box{
+        padding: 30px;
+        margin: 10px;
+    }
+
+}
+
+
+@media screen and (max-width: 800px){
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+    }  
+
+}
